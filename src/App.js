@@ -64,7 +64,9 @@ function App() {
           <AnimeSlider topSliderAnime={animeList.length > 0 ? animeList : topAnimeUpComing} titleAnime={title}/>
           <Sidebar topAnime={topAnime} />
       </div>
+      <footer></footer>
     </div>
+    
   );
 }
 
