@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+	background-color: #298ca9;
+
+    h1 {
+        color: #ffffe1;
+        font-size: 36px;
+        font-weight: 400;
+        text-align: center;
+
+        strong {
+            color: #eb7313;
+        }
+    }
+}
+
+.content-wrap {
+	display: flex;
+	flex-direction: column;
+	background-color: #fcecdd;
+
+	.topContainer{
+		width: 100%;
+		margin-top: 90px;
+		@media (max-width: 960px) {
+			margin-top: 0;
+		  }
+		display: flex;
+  		flex-wrap: wrap;
+		padding-left: 5px;
+		  h3 {
+			  width: 100%;
+			  text-align: center;
+			  color: #298ca9;
+        	  font-size: 36px;
+              font-weight: 400;
+			  padding-bottom: 50px;
+			  strong {
+				color: #eb7313;
+				}
+		  	}
+	}
+
+	main {
+		flex: 1 1 0%;
+		padding: 0px 16px;
+
+		.main-head {
+			display: flex;
+			justify-content: center;
+			padding-top: 10px;
+			padding-bottom: 15px;
+
+			.search-box {
+				margin-top: 10px;
+				display: flex;
+				justify-content: center;
+				flex: 1 1 0%;
+				
+				input {
+					appearance: none;
+					background: none;
+					outline: none;
+					border: none;
+
+					display: block;
+					width: 100%;
+					max-width: 400px;
+					padding: 16px;
+					border-radius: 999px;
+					background-color: #FFDCAC;
+
+					transition: 0.4s;
+
+					::placeholder {
+						color: #888;
+					}
+
+					&:focus, &:valid {
+						background-color: #313131;
+						color: #FFF;
+					}
+				}
+			}
+		}		
+	}
+	.titleNewReleases{
+		margin-top: 10px;
+		margin-bottom: 15px;
+		color: #eb7313;
+		text-align: center;
+	}
+	.anime-card {
+		width: 250px;
+		@media (max-width: 960px) {
+			width: 80%;
+			margin: 0 auto;
+		  }
+		height: 450px;
+		padding: 16px 8px;
+
+		a {
+			text-decoration: none;
+		}
+
+		figure {
+			display: block;
+			margin-bottom: 16px;
+
+			img {
+				display: block;
+				width: 100%;
+				height: 350px;
+				object-fit: cover;
+				border-radius: 16px;
+				box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+				transition: 0.4s;
+			}
+		}
+
+		h3 {
+			color: #313131;
+		}
+
+		&:hover {
+			figure {
+				img {
+					box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+					transform: scale(1.05);
+				}
+			}
+		}
+		.letterTop {
+			color: #313131;
+			margin-top: 5px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 20px;
+			@media (max-width: 960px) {
+				font-size: 30px;
+			}
+		}
+		.titleSlider {
+			margin-top: 10px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	.slick-slider, .slick-initialized {
+		width: 90%;
+		align-self: center;
+		
+	}
+	.slick-prev {
+		left: -35px;
+		@media (max-width: 960px) {
+			left: -10px;
+		  }
+	}
+	.slick-next {
+		@media (max-width: 960px) {
+			right: -10px;
+		  }
+	}
+	.slick-next:before, .slick-prev:before {
+		color: #eb7313;
+	}
+}
